@@ -1,43 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexstart</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <header class="bg-gray-200 shadow p-4 flex justify-between items-center">
+        <button onclick="logout()" class="text-red-500">Logout</button>
+    </header>
+    
+    <header class="bg-gray-200 shadow p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-blue-600">bconto</div>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href=".index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">Product</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">Integrations</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">Teaching</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">Prices</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">Accounting Companies</a></li>
+            </ul>
+        </nav>
+        <div class="space-x-2">
+            <button onclick="window.location.href='./login.html'" class="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+            <button onclick="window.location.href='./register.html'" class="bg-green-500 text-white px-4 py-2 rounded">Register</button>
+            <button onclick="window.location.href='./dashboard.html'" class="bg-red-500 text-orange-500 px-4 py-2 rounded-full">Enter without Registration</button>
+        </div>        
+    </header>
+    <main class="p-4">
+        <div id="root"></div> <!-- Этот элемент необходим для React -->
+    </main>
+    <footer class="bg-gray-800 text-gray-200 p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="footer-section">
+                <h4 class="text-lg font-bold mb-2">bconto</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-white">About bconto</a></li>
+                    <li><a href="#" class="hover:text-white">Reviews</a></li>
+                    <li><a href="#" class="hover:text-white">Free account recognition</a></li>
+                    <li><a href="#" class="hover:text-white">Improvement plan</a></li>
+                    <li><a href="#" class="hover:text-white">Advantages of the cloud</a></li>
+                    <li><a href="#" class="hover:text-white">Accounting program comparison</a></li>
+                    <li><a href="#" class="hover:text-white">For partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="text-lg font-bold mb-2">Calculators</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-white">Salary calculator 2024</a></li>
+                    <li><a href="#" class="hover:text-white">Per diem calculator</a></li>
+                    <li><a href="#" class="hover:text-white">Calendar of working days</a></li>
+                    <li><a href="#" class="hover:text-white">Individual activity calculator</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="text-lg font-bold mb-2">Very Serious</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-white">Rules</a></li>
+                    <li><a href="#" class="hover:text-white">Encyclopedia FAQ</a></li>
+                    <li><a href="#" class="hover:text-white">Comics</a></li>
+                    <li><a href="#" class="hover:text-white">Brand</a></li>
+                    <li><a href="#" class="hover:text-white">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="text-lg font-bold mb-2">Languages</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-white">German</a></li>
+                    <li><a href="#" class="hover:text-white">Polish</a></li>
+                    <li><a href="#" class="hover:text-white">English</a></li>
+                    <li><a href="#" class="hover:text-white">Russian</a></li>
+                </ul>
+            </div>
+        </div>
+        <form
